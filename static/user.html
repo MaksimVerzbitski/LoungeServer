@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="/static/styles/styles.css">
+</head>
+<body>
+    <div id="message"></div>
+    <h1>User Management</h1>
+    <div class="action-container">
+        <form id="actionForm">
+            <label for="action">Action:</label>
+            <select id="action" name="action" required>
+                <option value="create">Create User</option>
+                <option value="read">Read User</option>
+                <option value="read_all">Read All Users</option>
+                <option value="update">Update User</option>
+                <option value="delete">Delete User</option>
+                <option value="delete_all">Delete All Users</option>
+            </select>
+            <button type="button" id="performAction">Perform Action</button>
+        </form>
+    </div>
+    <form id="userForm">
+        <div id="userFields">
+            <label for="telegram_id">Telegram ID:</label>
+            <input type="number" id="telegram_id" name="telegram_id"><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br>
+            <label for="tokens">Tokens:</label>
+            <input type="number" id="tokens" name="tokens"><br>
+            <label for="referals">Referals:</label>
+            <input type="number" id="referals" name="referals"><br>
+            <label for="friends">Friends:</label>
+            <input type="number" id="friends" name="friends"><br>
+            <label for="active_chat">Active Chat:</label>
+            <input type="number" id="active_chat" name="active_chat"><br>
+        </div>
+        <div id="readFields" class="read-container" style="display:none;">
+            <label for="id">User ID:</label>
+            <input type="text" id="id" name="id">
+            <button type="button" id="readUserButton" class="read-btn">Read User</button>
+            <button type="button" id="readAllUsersButton" class="read-btn">Read All Users</button>
+            <button type="button" id="deleteAllUsersButton" class="read-btn">Delete All Users</button>
+        </div>
+
+        <div id="updateFields" class="update-container" style="display:none;">
+            <label for="update_id">User ID:</label>
+            <input type="text" id="update_id" name="id"><br>
+            <button type="button" id="fetchUserDataButton">Fetch User Data</button><br>
+            <label for="update_telegram_id">Telegram ID:</label>
+            <input type="number" id="update_telegram_id" name="telegram_id"><br>
+            <label for="update_username">Username:</label>
+            <input type="text" id="update_username" name="username"><br>
+            <label for="update_tokens">Tokens:</label>
+            <input type="number" id="update_tokens" name="tokens"><br>
+            <label for="update_referals">Referals:</label>
+            <input type="number" id="update_referals" name="referals"><br>
+            <label for="update_friends">Friends:</label>
+            <input type="number" id="update_friends" name="friends"><br>
+            <label for="update_active_chat">Active Chat:</label>
+            <input type="number" id="update_active_chat" name="active_chat"><br>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    <div id="userTable"></div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="/static/styles/styles.css">
+</head>
+<body>
+    <div id="message"></div>
+    <h1>User Management</h1>
+    <div class="action-container">
+        <form id="actionForm">
+            <label for="action">Action:</label>
+            <select id="action" name="action" required>
+                <option value="create">Create User</option>
+                <option value="read">Read User</option>
+                <option value="update">Update User</option>
+                <option value="delete">Delete User</option>
+            </select>
+            <button type="button" id="performAction">Perform Action</button>
+        </form>
+    </div>
+    <form id="userForm">
+        <div id="userFields">
+            <label for="telegram_id">Telegram ID:</label>
+            <input type="number" id="telegram_id" name="telegram_id"><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br>
+            <label for="tokens">Tokens:</label>
+            <input type="number" id="tokens" name="tokens"><br>
+            <label for="referals">Referals:</label>
+            <input type="number" id="referals" name="referals"><br>
+            <label for="friends">Friends:</label>
+            <input type="number" id="friends" name="friends"><br>
+            <label for="active_chat">Active Chat:</label>
+            <input type="number" id="active_chat" name="active_chat"><br>
+        </div>
+        <div id="readFields" class="read-container" style="display:none;">
+            <label for="id">User ID:</label>
+            <input type="text" id="id" name="id">
+            <button type="button" id="readUserButton" class="read-btn">Read User</button>
+            <button type="button" id="readAllUsersButton" class="read-btn">Read All Users</button>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    <div id="userTable"></div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="/static/styles/styles.css">
+</head>
+<body>
+    <div id="message"></div>
+    <h1>User Management</h1>
+    <div class="action-container">
+        <form id="actionForm">
+            <label for="action">Action:</label>
+            <select id="action" name="action" required>
+                <option value="create">Create User</option>
+                <option value="read">Read User</option>
+                <option value="update">Update User</option>
+                <option value="delete">Delete User</option>
+            </select>
+            <button type="button" id="performAction">Perform Action</button>
+        </form>
+    </div>
+    <form id="userForm">
+        <div id="userFields">
+            <label for="telegram_id">Telegram ID:</label>
+            <input type="number" id="telegram_id" name="telegram_id"><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br>
+            <label for="tokens">Tokens:</label>
+            <input type="number" id="tokens" name="tokens"><br>
+            <label for="referals">Referals:</label>
+            <input type="number" id="referals" name="referals"><br>
+            <label for="friends">Friends:</label>
+            <input type="number" id="friends" name="friends"><br>
+            <label for="active_chat">Active Chat:</label>
+            <input type="number" id="active_chat" name="active_chat"><br>
+        </div>
+        <div id="readFields" class="read-container" style="display:none;">
+            <label for="id">User ID:</label>
+            <input type="text" id="id" name="id">
+            <button type="button" id="readUserButton" class="read-btn">Read User</button>
+            <button type="button" id="readAllUsersButton" class="read-btn">Read All Users</button>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    <div id="userTable"></div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html> -->

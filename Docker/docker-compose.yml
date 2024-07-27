@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  lounge_server:
+    build: .
+    container_name: lounge_server_container
+    ports:
+      - "443:443"
+    volumes:
+      - .:/usr/src/app
+    restart: always

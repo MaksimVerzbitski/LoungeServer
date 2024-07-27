@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    color: #333;
+}
+
+.action-container {
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 10px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+button:hover {
+    background-color: #45a049;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.read-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.read-container label {
+    margin-right: 10px;
+}
+
+.read-container input {
+    width: auto;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#message {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    background-color: #dff0d8;
+    color: #3c763d;
+    font-weight: bold;
+    display: none;
+}
+
+#formMessage {
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    background-color: #dff0d8;
+    color: #3c763d;
+    font-weight: bold;
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 2px solid darkgreen; /* Dark green border */
+}
+
+th {
+    background-color: #e6ffe6; /* Light green background */
+    color: darkgreen; /* Dark green text */
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text */
+}
+
+tr:nth-child(even) td {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+tr:hover td {
+    background-color: #d9ffd9; /* Light green background on hover */
+}
+
+
+.read-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.read-btn:hover {
+    background-color: #0056b3;
+}
+
+.submit-btn {
+    margin-bottom: 20px;
+}

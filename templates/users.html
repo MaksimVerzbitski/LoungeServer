@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+</head>
+<body>
+    <h1>User Management</h1>
+    <form action="/user" method="post">
+        <input type="hidden" name="id" value="{{ user.id }}">
+        <label>Telegram ID: <input type="text" name="telegram_id" value="{{ user.telegram_id }}"></label><br>
+        <label>Username: <input type="text" name="username" value="{{ user.username }}"></label><br>
+        <label>Tokens: <input type="text" name="tokens" value="{{ user.tokens }}"></label><br>
+        <label>Referals: <input type="text" name="referals" value="{{ user.referals }}"></label><br>
+        <label>Friends: <input type="text" name="friends" value="{{ user.friends }}"></label><br>
+        <label>Active Chat: <input type="text" name="active_chat" value="{{ user.active_chat }}"></label><br>
+        <button type="submit">Save User</button>
+    </form>
+    <h2>Existing Users</h2>
+    <ul>
+    {% for user in users %}
+        <li>{{ user.id }}: {{ user.username }} <a href="/user/{{ user.id }}">Edit</a> | <a href="/user/{{ user.id }}/delete">Delete</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
